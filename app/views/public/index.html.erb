@@ -1,0 +1,83 @@
+<div class="text-center">
+  <h1 class="display-1">DonNTU</h1>
+  <%= image_tag("univer1.jpg", class: "img-responsive") %> 
+</div>
+
+<div class="text-center">
+  <h1 class="display-4">A little about the university</h1>
+</div>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pp99Son6Ftw?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col">
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                History
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              "Донецький національний технічний університет – один з передових і найстаріших вищих навчальних закладів України. З багаторічними традиціями і беззаперечним авторитетом, підтвердженим в України і світі."
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Faculties
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Гірничий факультет</li>
+                <li class="list-group-item">Факультет комп’ютерно-інтегрованих технологій, автоматизації, електроінженерії та радіоелектроніки</li>        
+                <li class="list-group-item">Факультет комп’ютерних наук і технологій</li>
+                <li class="list-group-item">Факультет економіки та менеджменту</li>
+                <li class="list-group-item">Факультет машинобудування, екології та хімічних технологій</li>
+                <li class="list-group-item">Навчально-науковий індустріальний інститут</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                University today
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              На базі ДонНТУ було створено регіональний технічний навчальний комплекс, до складу якого входило шість інститутів
+               (Гірництва та геології, Горлівський автомобільно-дорожній, Красноармійський індустріальний, Інститут післядипломної освіти,
+                Інститут міжнародного співробітництва та учбово-науковий інститут «Вища школа економіки та менеджменту»), 25 факультетів,
+                 магістратура державного управління, екстернатура, аспірантура, докторантура, підготовче відділення для іноземних громадян,
+                  кафедра військової підготовки, п’ять технікумів (Горлівський, Зуївський, Харцизький, Артемівський та Костянтинівський),
+                   науково-дослідна частина, дві проблемні лабораторії, науково-технічна бібліотека, Німецька читальна зала, заснована у співпраці з Гете-інститутом,
+                    сучасний спортивний комплекс.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="text-center">
+  <h1 class="display-4">Last News</h1>
+</div>
+<%= render partial: "posts/list", locals: { posts: @posts } %>

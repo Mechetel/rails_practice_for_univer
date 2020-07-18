@@ -1,0 +1,7 @@
+<h1>University News</h1>
+
+<%= render partial: "posts/list", locals: { posts: @posts } %>
+
+<% if current_admin_user %>
+  <%= link_to  "Добавить новость", new_post_path, :class => "btn btn-success" %>
+<% end %>

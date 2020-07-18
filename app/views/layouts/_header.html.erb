@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 pt-3 pb-3">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border rounded-pill border-secondary shadow bg-white rounded">
+        <a class="navbar-brand">Rails Practice</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to "Home", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "About", about_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "News", posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Contact", contact_path, class: "nav-link" %>
+            </li>
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0">
+            <% if user_signed_in? %>
+              <div class="dropdown">
+                <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= current_user.full_name %>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <%= link_to "Profile", profile_path(current_user.username) , class: "dropdown-item" %>
+                  <%= link_to "Setings", edit_user_registration_path , class: "dropdown-item" %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to "Sign Out", destroy_user_session_path , method: :delete, class: "dropdown-item" %>
+                </div>
+              </div>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path , class: "btn btn-outline-primary" %>
+              <%= link_to "Sign Up", new_user_registration_path , class: "btn btn-primary" %>
+            <% end %>
+          </form>
+        </div>
+      </nav>
+      
+    </div>
+  </div>
+</div>

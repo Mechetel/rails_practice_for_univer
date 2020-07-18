@@ -1,0 +1,12 @@
+<% posts.each do |post| %>
+  <div class="alert alert-light">
+    <h3><%= post.title %></h3>
+    <p><%= raw post.body %></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"><%= link_to "Read more", post_path(post), :class => 'btn btn-outline-primary' %></div>
+        <div class="col-md-4 ml-auto"><%= post.comments.count %> comments.</div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<% comments.each do |comment| %>
+  <div class="alert alert-light">
+    <p><strong><%= link_to comment.user.full_name, profile_path(comment.user.username) %></strong>: <%= comment.comment %></p>
+    <% if comment.user == current_user %>
+      <p>
+        <%= link_to 'Destroy Comment', [comment.post, comment],
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' },
+                    :class => "btn btn-warning"  %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
