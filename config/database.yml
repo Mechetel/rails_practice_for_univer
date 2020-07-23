@@ -84,4 +84,4 @@ production:
   <<: *default
   database: rails_practice_production
   username: rails_practice
-  password: <%= ENV['RAILS_PRACTICE_DATABASE_PASSWORD'] %>
+  password: 123qweHM

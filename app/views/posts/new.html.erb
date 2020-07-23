@@ -11,7 +11,9 @@
   </p>
   <p>
     Текст статьи<br>
-    <%= f.cktext_area(:body, {:class => 'form-control'}) %>
+    <div data-no-turbolink>
+      <%= f.cktext_area :body, :class => 'ckeditor' %>
+    </div>
   </p>
 
   <p>

@@ -6,10 +6,11 @@
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
-require("ckeditor/init")
 require("channels")
+
 import "bootstrap"
 import "../../assets/stylesheets/application"
+
 
 document.addEventListener("turbolinks:download", () => {
   $('[data-toggle="tooltip"]').tooltip()
