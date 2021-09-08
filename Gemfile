@@ -35,7 +35,7 @@ gem "ckeditor"
 gem "carrierwave"
 gem "mini_magick"
 
-gem 'better_errors', '~> 2.4'
+gem 'better_errors', '~> 2.8'
 gem 'activeadmin'
 gem 'devise'
 
